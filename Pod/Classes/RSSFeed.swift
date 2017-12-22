@@ -16,7 +16,7 @@ import Foundation
     
     Item-level elements are deserialized into `RSSItem` objects and stored in the `items` property.
 */
-open class RSSFeed: CustomStringConvertible {
+open class RSSFeed: CustomStringConvertible, Codable {
     open var title: String? = nil
     open var link: String? = nil
     open var feedDescription: String? = nil

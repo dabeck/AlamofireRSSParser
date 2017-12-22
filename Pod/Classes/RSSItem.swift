@@ -12,7 +12,7 @@ import Foundation
 /**
     Item-level elements are deserialized into `RSSItem` objects and stored in the `items` array of an `RSSFeed` instance
 */
-open class RSSItem: CustomStringConvertible {
+open class RSSItem: CustomStringConvertible, Codable {
     open var title: String? = nil
     open var link: String? = nil
     
