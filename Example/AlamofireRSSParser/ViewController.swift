@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         
-        let url = "http://feeds.foxnews.com/foxnews/latest?format=xml"
+        let url = "http://www.bento.de/rss/feed.rss"
         
         Alamofire.request(url).responseRSS() { (response) -> Void in
             if let feed: RSSFeed = response.result.value {
