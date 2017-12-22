@@ -12,6 +12,7 @@
 		17E810DACA7F9F932EA2E4483ED23D54 /* RSSFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB50D1D753FF467B9B6B004C6D13A204 /* RSSFeed.swift */; };
 		1A32BACB8F45D0D2430D4BDB1346B621 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0533E4EC2277AAAC8888328EC5A64B /* Foundation.framework */; };
 		1B9EDEDC964E6B08F78920B4F4B9DB84 /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B44A27EFBB0DA84D738057B77F3413B1 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2EF311161FED38E80000F0F1 /* RSSMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF311141FED38DF0000F0F1 /* RSSMedia.swift */; };
 		3080F5FAF097EA53C7E8B13EEC69334B /* Pods-AlamofireRSSParser_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 33CFBC0C83C84D88C65382EBEB7BE42B /* Pods-AlamofireRSSParser_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3626B94094672CB1C9DEA32B9F9502E1 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01C037B4034EDA3D7955BC5E4E9D9D6 /* TaskDelegate.swift */; };
 		5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E230A0448B394DE26E688DAC8E6201E /* Request.swift */; };
@@ -98,6 +99,7 @@
 		29F6576072E84C71670C930A2D1B13A9 /* Pods-AlamofireRSSParser_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AlamofireRSSParser_Example-frameworks.sh"; sourceTree = "<group>"; };
 		2A8E6F93901738D68FDF99BC1D9AE77E /* Pods-AlamofireRSSParser_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AlamofireRSSParser_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		2DDD3A9744C572817BA30A8B36A350DE /* Pods-AlamofireRSSParser_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AlamofireRSSParser_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		2EF311141FED38DF0000F0F1 /* RSSMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RSSMedia.swift; path = Pod/Classes/RSSMedia.swift; sourceTree = "<group>"; };
 		316B45156B16D8DF0B5C723494BD0769 /* Pods-AlamofireRSSParser_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AlamofireRSSParser_Example.release.xcconfig"; sourceTree = "<group>"; };
 		32B030D27CAC730C5EB0F22390645310 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		33CFBC0C83C84D88C65382EBEB7BE42B /* Pods-AlamofireRSSParser_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AlamofireRSSParser_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -334,6 +336,7 @@
 				CF988B35BB1585943111B466ECCE6C18 /* AlamofireRSSParser.swift */,
 				BB50D1D753FF467B9B6B004C6D13A204 /* RSSFeed.swift */,
 				FDDF05C6BEEE01C90E8F38608387920B /* RSSItem.swift */,
+				2EF311141FED38DF0000F0F1 /* RSSMedia.swift */,
 				9EBAF4F00A1093AB2D22040C2D5016D3 /* Support Files */,
 			);
 			name = AlamofireRSSParser;
@@ -536,6 +539,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6228BD86DBA68B083402CA8B3BC0396C /* AlamofireRSSParser-dummy.m in Sources */,
+				2EF311161FED38E80000F0F1 /* RSSMedia.swift in Sources */,
 				993B3715A850664550282540F2AAF0E3 /* AlamofireRSSParser.swift in Sources */,
 				17E810DACA7F9F932EA2E4483ED23D54 /* RSSFeed.swift in Sources */,
 				92353E67E554C67760EA98CBA50F4B69 /* RSSItem.swift in Sources */,

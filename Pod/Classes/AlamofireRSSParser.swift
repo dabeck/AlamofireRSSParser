@@ -76,6 +76,7 @@ open class AlamofireRSSParser: NSObject, XMLParserDelegate {
     var parsingItems: Bool = false
     
     var currentItem: RSSItem? = nil
+    var currentMedia: RSSMedia?
     var currentString: String!
     var currentAttributes: [String: String]? = nil
     var parseError: NSError? = nil
@@ -112,6 +113,7 @@ open class AlamofireRSSParser: NSObject, XMLParserDelegate {
     func parse() -> (feed: RSSFeed?, error: NSError?) {
         self.feed = RSSFeed()
         self.currentItem = nil
+        self.currentMedia = nil
         self.currentAttributes = nil
         self.currentString = String()
         
@@ -123,9 +125,13 @@ open class AlamofireRSSParser: NSObject, XMLParserDelegate {
     open func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         self.currentString = String()
         
-        self.currentAttributes = attributeDict
+        currentAttributes = attributeDict
         
-        if ((elementName == "item") || (elementName == "entry")) {
+        if elementName == "media:content" {
+            self.currentMedia = RSSMedia(attributes: attributeDict)
+        }
+        
+        if elementName == "item" || elementName == "entry" {
             self.currentItem = RSSItem()
         }
     }
@@ -196,9 +202,10 @@ open class AlamofireRSSParser: NSObject, XMLParserDelegate {
             
             if (elementName == "media:content") {
                 if let attributes = self.currentAttributes {
-                    if let url = attributes["url"] {
-                        currentItem.mediaContent = url
-                    }
+                    currentMedia?.attributes = attributes
+                }
+                if let media = currentMedia {
+                    currentItem.mediaContent = media
                 }
             }
             
